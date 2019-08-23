@@ -16,4 +16,8 @@ bike = docking_station.release_bike
 expect(bike.working?).to eq(true)
 end
 
+  it "dock method accepts a Bike instance" do
+    docking_station = DockingStation.new
+    expect(docking_station).to respond_to(:dock).with(1).argument
+  end
 end
